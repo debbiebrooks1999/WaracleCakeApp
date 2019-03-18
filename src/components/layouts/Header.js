@@ -1,10 +1,13 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
 
     <header className="jumbotron" style={headerStyle}>
       <h1>Cake List </h1>
+      <NavLink activeStyle={activeLink} style={linkStyle} to="/view">View some Cakes </NavLink> | 
+      <NavLink activeStyle={activeLink} style={linkStyle} to="/add">Add your own </NavLink>
     </header>
   )
 }

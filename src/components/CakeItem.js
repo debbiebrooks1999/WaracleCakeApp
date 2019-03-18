@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import StarRatingComponent from 'react-star-rating-component';
+
 
 
 export class CakeItem extends Component {
     constructor(props) {
         super(props);
       }
+
   render() {
     const { id, name, imageUrl, comment, yumFactor } = this.props.posts;
     return (
@@ -13,7 +16,7 @@ export class CakeItem extends Component {
         <li className="list-group-item list-group-item-action">
           <div className="row">
             <div className="col-2"><Thumbnail img={this.props.post.imageUrl} /></div>
-            <div className="col-8"><h4>{this.props.post.name}</h4> </div>
+            <div className="col"><h2>{this.props.post.name}</h2> </div>
           </div>
         </li>
     )

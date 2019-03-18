@@ -18,7 +18,9 @@ store.dispatch(fetchAllCakes());
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <Router>
+            <Route path="/" component={App} />
+        </Router>
     </Provider>, document.getElementById('root'));
 
 registerServiceWorker();
